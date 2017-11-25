@@ -1,28 +1,29 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro:900");
-html, body {
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600|Source+Sans+Pro:900");
+html,
+body {
   padding: 0;
   margin: 0; }
 
 .blue-text {
-  color: #2196F3; }
+  color: #f67280; }
 
 .white-text {
-  color: #FAFAFA; }
+  color: #fafafa; }
 
 .page-container {
-  max-height: 90vh;
-  max-width: 92vw;
+  height: 120vh;
   margin: 5vh 4vw; }
 
 #masthead {
   width: 92vw;
   overflow: hidden;
-  background: #2196F3;
+  background: #f67280;
   position: fixed;
-  transition: transform 0.2s ease-in-out; }
+  top: 5vh;
+  transition: transform 1s ease-in-out; }
 
 .masthead-hello {
-  background: linear-gradient(90deg, #FAFAFA 50%, #2196F3 50%);
+  background: linear-gradient(90deg, #fafafa 50%, #f67280 50%);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -47,9 +48,6 @@ html, body {
   height: 90vh;
   transition: transform 0.4s ease-in-out; }
 
-.masthead-container {
-  margin: 30vh 20vw; }
-
 #masthead-name {
   animation-duration: 0.5s;
   font-family: "Source Sans Pro", Helvetica;
@@ -57,7 +55,136 @@ html, body {
   color: white;
   letter-spacing: 1px; }
 
+#masthead-description-text {
+  animation-duration: 0.3s;
+  margin: 30vh 10vw; }
+
+.masthead-sub-text {
+  margin-top: 0;
+  font-family: "Source Sans Pro", Helvetica;
+  font-size: 20px;
+  color: #393e41;
+  letter-spacing: 1px; }
+
 #skills {
-  visibility: hidden; }
+  transform: scale(0, 0);
+  width: 90%;
+  height: 70vh;
+  margin: 15vh auto; }
+
+#skills-text {
+  display: flex;
+  flex-direction: column; }
+
+#skills-title {
+  font-family: "Source Sans Pro", Helvetica;
+  font-size: 90px;
+  color: #3ddc97;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  margin-left: 10vw;
+  width: auto; }
+
+#skills-sub-title {
+  font-family: "Source Sans Pro", Helvetica;
+  font-size: 35px;
+  color: #393e41;
+  letter-spacing: 1px;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  width: 50%; }
+
+#skills-description-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #393e41;
+  letter-spacing: 1px;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  margin-bottom: 3vh;
+  height: 100%;
+  width: 40%; }
+
+.skills-indiv-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #393e41;
+  font-weight: 100;
+  text-align: center; }
+
+.skills-section {
+  display: flex; }
+
+#skills-section-wrapper {
+  width: 100%; }
+
+.skills-icon-section {
+  margin: 2vh auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.img-icon {
+  width: 100px;
+  height: 100px;
+  animation-name: fade-in;
+  animation-fill-mode: both;
+  animation-duration: 0.5s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(1) {
+    animation-delay: 1.5333333333s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(2) {
+    animation-delay: 1.5666666667s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(3) {
+    animation-delay: 1.6s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(4) {
+    animation-delay: 1.6333333333s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(5) {
+    animation-delay: 1.6666666667s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(6) {
+    animation-delay: 1.7s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(7) {
+    animation-delay: 1.7333333333s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(8) {
+    animation-delay: 1.7666666667s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(9) {
+    animation-delay: 1.8s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(10) {
+    animation-delay: 1.8333333333s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(11) {
+    animation-delay: 1.8666666667s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(12) {
+    animation-delay: 1.9s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(13) {
+    animation-delay: 1.9333333333s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(14) {
+    animation-delay: 1.9666666667s; }
+  .img-icon .skills-section-wrapper img:nth-of-type(15) {
+    animation-delay: 2s; }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+#portfolio {
+  transform: scale(0, 0);
+  display: none; }
+
+#portfolio-title {
+  font-family: "Source Sans Pro", Helvetica;
+  font-size: 90px;
+  color: #2196f3;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  margin-left: 10vw;
+  width: auto; }
+
+.portfolio-item-text {
+  width: 40%;
+  height: 70vh;
+  background-color: #f67280; }
+
+.portfolio-item-content {
+  width: 50%;
+  height: 70vh; }
 
 /*# sourceMappingURL=styles.css.map */

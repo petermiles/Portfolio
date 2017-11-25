@@ -1,28 +1,58 @@
 window.addEventListener("scroll", function(e) {
-	console.log(window.scrollY);
-	let mastheadHelloShown,
-		mastheadDescriptionShown = false;
+	let height = Math.max(
+		document.body.scrollHeight,
+		document.body.offsetHeight,
+		document.documentElement.clientHeight,
+		document.documentElement.scrollHeight,
+		document.documentElement.offsetHeight
+	);
 
+	let width = Math.max(
+		document.body.scrollWidth,
+		document.body.offsetWidth,
+		document.documentElement.clientWidth,
+		document.documentElement.scrollWidth,
+		document.documentElement.offsetWidth
+	);
+
+	let heightPer = Math.round(window.scrollY / height * 100);
 	let masthead = document.getElementById("masthead");
 	let mastheadHello = document.getElementById("masthead-hello");
 	let mastheadDescriptionContainer = document.getElementById(
 		"masthead-description-container"
 	);
-	let mastheadName = document.getElementById("masthead-name");
+	let mastheadDescriptionText = document.getElementById(
+		"masthead-description-text"
+	);
 
 	let skills = document.getElementById("skills");
+	let skillsText = [
+		document.getElementById("skills-title"),
+		document.getElementById("skills-text")
+	];
 
-	if (window.scrollY > 65) {
+	console.log(heightPer);
+	if (heightPer > 8) {
+		mastheadDescriptionShown = true;
 		mastheadHello.style.transform = "scaleX(50%)";
 		mastheadHello.style.width = "50%";
 		mastheadHello.style.transform = "translateX(-50%)";
 		mastheadDescriptionContainer.style.display = "inline";
 		mastheadHello.style.backgroundcolor = "blue";
-		mastheadName.classList.add("animated", "slideInRight");
+		mastheadDescriptionText.classList.add("animated", "slideInRight");
 	}
 
-	if (window.scrollY > 300) {
+	if (heightPer > 12) {
 		masthead.style.position = "relative";
-		skills.style.visibility = "visible";
+		masthead.style.top = "0";
+		skills.style.transform = "scale(1,1)";
+		skillsText.map(x => {
+			x.style.animationDuration = ".5s";
+			x.classList.add("animated", "slideInLeft");
+		});
+		_.mapObject(document.getElementsByClassName("img-icon"), x => {
+			x.style.animationDuration = ".8s";
+			x.classList.add("animated", "fadeIn");
+		});
 	}
 });
