@@ -105,13 +105,6 @@ body {
   height: 100%;
   width: 40%; }
 
-.skills-indiv-title {
-  font-family: "Open Sans", sans-serif;
-  font-size: 20px;
-  color: #393e41;
-  font-weight: 100;
-  text-align: center; }
-
 .skills-section {
   display: flex; }
 
@@ -167,24 +160,71 @@ body {
     opacity: 1; } }
 #portfolio {
   transform: scale(0, 0);
-  display: none; }
+  display: none;
+  width: 90%; }
 
 #portfolio-title {
   font-family: "Source Sans Pro", Helvetica;
   font-size: 90px;
   color: #2196f3;
   letter-spacing: 1px;
-  margin-bottom: 0;
-  margin-left: 10vw;
+  margin-bottom: 5vh;
+  text-align: center;
   width: auto; }
+
+.portfolio-item {
+  margin-bottom: 10vh; }
 
 .portfolio-item-text {
   width: 40%;
-  height: 70vh;
-  background-color: #f67280; }
+  float: left; }
+
+.portfolio-item-title {
+  font-family: "Source Sans Pro", Helvetica;
+  color: #00732e;
+  font-size: 3em;
+  text-align: center; }
+
+.portfolio-item-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #393e41;
+  font-weight: 100;
+  width: 80%;
+  margin: 5vh auto 0; }
+
+.portfolio-item-tech {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #393e41;
+  font-weight: 100;
+  width: 80%;
+  margin: 5vh auto 0; }
+
+.portfolio-item-tech-icons {
+  max-width: 90%;
+  margin: 5vh auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .portfolio-item-tech-icons img {
+    width: 75px;
+    height: 75px; }
+  .portfolio-item-tech-icons figure {
+    margin: 0;
+    padding: 0; }
+  .portfolio-item-tech-icons figcaption {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    text-align: center; }
 
 .portfolio-item-content {
-  width: 50%;
-  height: 70vh; }
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.content-img {
+  margin: 0 auto; }
 
 /*# sourceMappingURL=styles.css.map */

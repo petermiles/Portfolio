@@ -135,14 +135,6 @@ body {
 	width: 40%;
 }
 
-.skills-indiv-title {
-	font-family: "Open Sans", sans-serif;
-	font-size: 20px;
-	color: $black;
-	font-weight: 100;
-	text-align: center;
-}
-
 .skills-section {
 	display: flex;
 }
@@ -186,6 +178,7 @@ body {
 #portfolio {
 	transform: scale(0, 0);
 	display: none;
+	width: 90%;
 }
 
 #portfolio-title {
@@ -193,18 +186,74 @@ body {
 	font-size: 90px;
 	color: $blue;
 	letter-spacing: 1px;
-	margin-bottom: 0;
-	margin-left: 10vw;
+	margin-bottom: 5vh;
+	// margin-left: 10vw;
+	text-align: center;
 	width: auto;
+}
+
+.portfolio-item {
+	margin-bottom: 10vh;
 }
 
 .portfolio-item-text {
 	width: 40%;
-	height: 70vh;
-	background-color: $red;
+	float: left;
+}
+
+.portfolio-item-title {
+	font-family: "Source Sans Pro", Helvetica;
+	color: rgb(0, 115, 46);
+	font-size: 3em;
+	text-align: center;
+}
+
+.portfolio-item-subtitle {
+	font-family: "Open Sans", sans-serif;
+	font-size: 20px;
+	color: $black;
+	font-weight: 100;
+	width: 80%;
+	margin: 5vh auto 0;
+}
+
+.portfolio-item-tech {
+	font-family: "Open Sans", sans-serif;
+	font-size: 20px;
+	color: $black;
+	font-weight: 100;
+	width: 80%;
+	margin: 5vh auto 0;
+}
+
+.portfolio-item-tech-icons {
+	max-width: 90%;
+	margin: 5vh auto 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	img {
+		width: 75px;
+		height: 75px;
+	}
+	figure {
+		margin: 0;
+		padding: 0;
+	}
+	figcaption {
+		font-family: "Open Sans", sans-serif;
+		font-size: 16px;
+		text-align: center;
+	}
 }
 
 .portfolio-item-content {
-	width: 50%;
-	height: 70vh;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.content-img {
+	margin: 0 auto;
 }
